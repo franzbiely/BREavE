@@ -1,7 +1,7 @@
 import React from "react"
-import avatar from "../images/fma.jpg"
 import "./../styles/style.scss"
-import Button from "../components/buttons/Button"
+import Front from "./front"
+
 class App extends React.Component{
     constructor(props) {
         super(props); 
@@ -58,17 +58,7 @@ class App extends React.Component{
                     </div>
                     <div id="front">
 
-                        <div className="face-container">
-                            <div style={{flex:1}}>
-                                <h2>Francis Albores</h2>
-                                <sub>Web/Mobile Developer</sub>
-                                <hr />
-                                <h3 className="rotatingSlogan">60% Frontend</h3 >
-                            </div>
-                            <img src={avatar}  className="avatar" />
-                            <Button label="Go" handleClick={this.toTop} />
-
-                        </div>
+                        <Front handleClick={this.toTop} />
                         
                     </div>
                     <div id="bottom">
