@@ -1,0 +1,89 @@
+// gatsby clearer
+div[role="group"][tabindex] {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body, #___gatsby {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+}
+// end
+
+body {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+#screen {
+    transition: 1s all ease-in-out;
+    flex: 1;
+    display: flex;
+    max-width: 800px;
+}
+.box {
+    /* flex:1; */
+    width: 200px;
+    height: 200px;
+    perspective: 1500px;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 1, 0deg);
+    transition: 1s all ease-in-out;
+}
+.box > * {
+    background:skyblue;
+    opacity:0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: inherit;
+    font-size: 60px;
+    color: #000;
+    border:1px solid #999;
+    font-size: 10px;
+}
+.box > * > img {
+    max-width: 100%;
+    object-fit: cover;
+    max-height: 100%;
+}
+#top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+#front {
+    transform: translateZ(100px);
+}
+#bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+#back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+#side-left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+#side-right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.avatar {
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+}
+#screen .avatar {
+    width:200px;
+    height:200px;
+}
+.face-container {
+    display:flex;
+    padding:20px;
+    flex:1;
+}
